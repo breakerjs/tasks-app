@@ -4,10 +4,11 @@ import styles from '../styles/Home.module.css'
 import mongoose from 'mongoose'
 import Link from 'next/link'
 import mongoConnect from '../library/mongoConnect'
-import tareasSchema from '../config/tareasSchema'
+import tareaSchema from '../config/tareasSchema'
 import bodyParser from 'body-parser'
+import dayjs from 'dayjs'
 
-export default function Home() {
+export default function Home({ tasks }) {
   return (
     <>
     <div className={styles.container}>
@@ -29,7 +30,23 @@ export default function Home() {
           </Link>
         </div>
         <div className="containerFromTaskList">
-
+          {
+            tasks.map((task) => {
+              return (
+                <div className="taskList" key={task._id}>
+                  <div className="taskListTitle">
+                    <h3>{task.titulo}</h3>
+                    <p>{task.descripcion}</p>
+                    <p>{task.notaAdicional}</p>
+                    <p>{
+                    dayjs(task.fecha).format('DD/MM/YYYY')
+                    }
+                    </p>
+                  </div>
+                </div>
+              )
+            })
+          }
         </div>
       </div>
     </div>
@@ -39,11 +56,11 @@ export default function Home() {
 
 export async function getServerSideProps () {
   const mongo = await mongoConnect();
-  const tasks = await tareasSchema.find({});
+  const tasks = await tareaSchema.find({});
   console.log(tasks)
   return {
     props: {
-      tasks
+      tasks: JSON.parse(JSON.stringify(tasks)),
     }
   }
 }

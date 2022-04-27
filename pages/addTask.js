@@ -15,13 +15,13 @@ export default function addTask () {
         </Head>
         <div>
             <h1 className="titlePage">Añadir Tarea</h1>
-            <div className="containerBtn">
-                <input type="text" placeholder="Título de la tarea" className="inputTitleTask" />
-                <input type="text" placeholder="Título de la tarea" className="inputTitleTask" />
-                <input type="text" placeholder="Título de la tarea" className="inputTitleTask" />
-                <input type="date" placeholder="Título de la tarea" className="inputTitleTask" />
-                <Link href="/api/addTask"><a>Registrar</a></Link>
-            </div>
+            <form className="containerBtn" action="/api/addTask" method="POST">
+                <input type="text" placeholder="Título de la tarea" name="inputTitleTask" />
+                <input type="text" placeholder="Descripcion de la tarea" name="inputDescTask" />
+                <input type="text" placeholder="Notas adicionales" name="inputNoteTask" />
+                <input type="date" placeholder="Fecha de entrega" name="inputDateTask" />
+                <input type="submit" value="Añadir Tarea" name="btnAddTask" />
+            </form>
         </div>
         </>
     )

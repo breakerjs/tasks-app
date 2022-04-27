@@ -1,9 +1,10 @@
 import mongoose from 'mongoose'
+const Schema = mongoose.Schema;
 
 
-export default function mongoConnect() {
+export default async function mongoConnect() {
     try{
-        mongoose.connect("mongodb+srv://fpicc:carolinamama@cluster0.ko4ba.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+        await mongoose.connect("mongodb+srv://fpicc:carolinamama@cluster0.ko4ba.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         })

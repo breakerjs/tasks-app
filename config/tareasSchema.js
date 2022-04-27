@@ -2,6 +2,10 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema;
 
 const tareaSchema = new Schema({
+    id: {
+        type: Number,
+        required: true,
+    },
     titulo: {
         type: String,
         required: true
