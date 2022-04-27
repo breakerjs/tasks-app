@@ -13,14 +13,10 @@ export default async function addTask (req,res) {
             titulo: req.body.inputTitleTask,
             descripcion: req.body.inputDescTask,
             notaAdicional: req.body.inputNoteTask,
-            fecha: req.body.inputDateTask,
         })
         try {
             await task.save()
-            res.send(JSON.stringify({
-                status: 'ok',
-                message: 'Tarea añadida correctamente',
-            }))
+            res.redirect('/')
         }catch(e){
             res.send(JSON.stringify({
                 status: 'error',

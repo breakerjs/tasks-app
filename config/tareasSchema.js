@@ -1,11 +1,8 @@
 import mongoose from 'mongoose'
 const Schema = mongoose.Schema;
+import dayjs from 'dayjs'
 
 const tareaSchema = new Schema({
-    id: {
-        type: Number,
-        required: true,
-    },
     titulo: {
         type: String,
         required: true
@@ -16,7 +13,7 @@ const tareaSchema = new Schema({
     },
     fecha: {
         type: Date,
-        required: true
+        default: Date.now,
     } 
 })
 

@@ -16,23 +16,19 @@ a {
 }
 
 .titlePage {
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.8rem;
   font-weight: bold;
   text-align: center;
 }
 
 .descPage {
+  margin-top: -25px;
   text-align: center;
 }
 
 .muted {
   color: #c9c9c9;
-}
-
-.divider {
-  width:5px;
-  height:auto;
-  display:inline-block;
 }
 
 .containerBtn {
@@ -41,8 +37,9 @@ a {
 }
 
 .btn {
+  transition: 0.75s;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
   padding: 0.5rem 1rem;
   background-color: rgb(132, 132, 132);
   color: #fff;
@@ -50,10 +47,9 @@ a {
   font-weight: bold;
 }
 
-.divider {
-  width:5px;
-  height:auto;
-  display:inline-block;
+.btn:hover {
+  transition: 0.75s;
+  background-color: rgb(69, 69, 69);
 }
 
 .containerFromTaskList {
@@ -74,4 +70,19 @@ a {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
+}
+
+input {
+  padding:10px;
+  border-radius: 3.5px;
+  width: auto;
+  border-color: #000000;
+  margin-top: 10px;
+}
+
+.containerBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
