@@ -11,6 +11,11 @@ const tareaSchema = new Schema({
         type: String,
         required: true
     },
+    notaAdicional: {
+        type: String,
+        required: false,
+        default: '',
+    },
     fecha: {
         type: Date,
         default: Date.now,

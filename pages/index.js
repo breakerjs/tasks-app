@@ -12,7 +12,7 @@ import HeaderNav from '../components/HeaderNav'
 import relativeTime from 'dayjs/plugin/relativeTime'
 dayjs.extend(relativeTime)
 
-export default function Home({ tasks }) {
+export default function Home({ tasks, errorThrowed }) {
   return (
     <>
     <div className={styles.container}>
@@ -30,12 +30,12 @@ export default function Home({ tasks }) {
               return (
                 <div className="taskList" key={task._id}>
                   <div className="taskListTitle">
-                    <h3>{task.titulo}</h3>
-                    <p>{task.descripcion}</p>
-                    <p>{task.notaAdicional}</p>
-                    <p>{
+                    <h3 className="taskTitle">{task.titulo}</h3>
+                    <p className="taskDesc">{task.descripcion}</p>
+                    <p className="taskNoteAdt">{task.notaAdicional}</p>
+                    <p className="taskTimePublished">Uploaded {
                       dayjs().from(dayjs(task.fecha), true)
-                    }
+                    } ago
                     </p>
                   </div>
                 </div>

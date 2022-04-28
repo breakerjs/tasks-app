@@ -12,6 +12,7 @@ a {
 }
 
 * {
+  font-family: 'Nunito', sans-serif;
   box-sizing: border-box;
 }
 
@@ -57,7 +58,8 @@ a {
 }
 
 .taskList {
-  background-color: rgb(153, 153, 206);
+  transition: 0.75s;
+  background-color: rgb(225, 225, 226);
   margin-top: 10px;
   display: flex;
   flex-direction: column;
@@ -66,10 +68,38 @@ a {
   border-radius: 0.5rem;
 }
 
+@media (max-width: 796px) {
+  .taskList {
+    padding: 10px;
+  }
+}
+
 .taskListTitle {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
+}
+
+.taskTitle {
+  color: #000000;
+  font-weight: 900;
+  border-radius: 0.3rem;
+  margin-top: 1.2rem;
+  font-size: 2.5rem;
+}
+
+.taskDesc {
+  margin-top: -1.8rem;
+  font-size: 1.2rem;
+}
+
+.taskNoteAdt {
+  font-size: 1rem;
+}
+
+.taskTimePublished {
+  font-size: 13px;
+  color: #959595;
 }
 
 input {
