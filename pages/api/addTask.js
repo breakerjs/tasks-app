@@ -17,6 +17,10 @@ export default async function addTask (req,res) {
         try {
             await task.save()
             res.redirect('/')
+            res.setTimeout(10000, () => {
+                res.statusCode = 408;
+                res.end('Request timed out');
+            });
         }catch(e){
             res.send(JSON.stringify({
                 status: 'error',
