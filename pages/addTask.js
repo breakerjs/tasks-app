@@ -3,9 +3,9 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import mongoose from 'mongoose'
 import Link from 'next/link'
-import bodyParser from 'body-parser'
 import Header from '../components/Header'
 import HeaderNav from '../components/HeaderNav'
+import { getServerSideProps } from '.'
 
 export default function addTask () {
     return (

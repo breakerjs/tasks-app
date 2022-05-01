@@ -5,13 +5,14 @@ import mongoose from 'mongoose'
 import Link from 'next/link'
 import mongoConnect from '../library/mongoConnect'
 import tareaSchema from '../config/tareasSchema'
-import bodyParser from 'body-parser'
 import dayjs from 'dayjs'
 import Header from '../components/Header'
 import HeaderNav from '../components/HeaderNav'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import { useState } from 'react'
 dayjs.extend(relativeTime)
+
+// ideas a tener en cuenta: agregar temas tipo r/argentina, agregar el perfil de los usuarios
 
 
 export default function Home({ tasks }) {
@@ -40,7 +41,6 @@ export default function Home({ tasks }) {
       <Header/>
       <div>
         <HeaderNav/>
-        {/* TERMINAR DE CONFIGURAR BARRA DE SEARCH INPUT PARA FILTRAR POSTS */}
         <div className="searchInputDiv">
           <input 
           type='search'

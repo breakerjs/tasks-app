@@ -19,7 +19,7 @@ const tareaSchema = new Schema({
     fecha: {
         type: Date,
         default: Date.now,
-    } 
+    },
 })
 
 export default mongoose.models['tareaSchema'] || mongoose.model('tareaSchema', tareaSchema)
