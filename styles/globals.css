@@ -122,8 +122,24 @@ a {
   font-size: 2.5rem;
 }
 
+.fitTheme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskTheme {
+  width: 30%;
+  opacity: 0.;
+  background-color: #c6ccc7;
+  padding: 5px;
+  border-radius: 7px;;
+  margin-top: -36px;
+}
+
 .taskDesc {
-  margin-top: -1.8rem;
+  margin-top: -1.1rem;
   font-size: 1.2rem;
 }
 
@@ -161,4 +177,20 @@ input {
   margin-top: -10px;
   text-align: center;
   font-size: 1.3rem;
+}
+
+.linkCommunity {
+  margin-top: -24px;;
+  display: flex;
+  justify-content: center;
+}
+
+.linkComText {
+  transition: 0.75s;
+  color: #699ed6;
+}
+
+.linkComText:hover {
+  transition: 0.75s;
+  color: #557fac;
 }

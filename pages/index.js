@@ -1,7 +1,4 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import mongoose from 'mongoose'
 import Link from 'next/link'
 import mongoConnect from '../library/mongoConnect'
 import tareaSchema from '../config/tareasSchema'
@@ -51,7 +48,7 @@ export default function Home({ tasks }) {
           />
         </div>
         <div className="containerBtn">
-          <Link href="/addTask">
+          <Link href="/create/publication">
           <a className="btnAddTask btn">Añadir texto</a>
           </Link>
         </div>
@@ -62,6 +59,9 @@ export default function Home({ tasks }) {
             <div className="taskList" key={task._id}>
                   <div className="taskListTitle">
                     <h3 className="taskTitle">{task.titulo}</h3>
+                    {/* <div className="fitTheme">
+                      <h5 className="taskTheme">🥦 Verduras</h5>
+                    </div> */}
                     <p className="taskDesc">{task.descripcion}</p>
                     <p className="taskNoteAdt">{task.notaAdicional}</p>
                     <p className="taskTimePublished">Uploaded {

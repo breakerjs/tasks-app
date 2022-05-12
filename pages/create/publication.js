@@ -1,11 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 import mongoose from 'mongoose'
 import Link from 'next/link'
-import Header from '../components/Header'
-import HeaderNav from '../components/HeaderNav'
-import { getServerSideProps } from '.'
+import Header from '../../components/Header'
+import HeaderNav from '../../components/HeaderNav'
 
 export default function addTask () {
     return (
