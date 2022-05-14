@@ -16,6 +16,6 @@ export default async function addTask (req,res) {
             tema: req.body.inputNoteTheme,
         })
         await task.save()
-        res.redirect('/')
+        res.send(task)
     }
 }
