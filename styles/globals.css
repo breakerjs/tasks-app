@@ -99,6 +99,11 @@ a {
   border-radius: 0.5rem;
 }
 
+.taskList:hover {
+  transition: 0.75s ease-in-out;
+  background-color: #d7d7d7;
+}
+
 @media (max-width: 796px) {
   .taskList {
     padding: 10px;
@@ -130,7 +135,7 @@ a {
 }
 
 .taskTheme {
-  width: 30%;
+  width: auto;
   opacity: 0.;
   background-color: #c6ccc7;
   padding: 5px;
@@ -158,6 +163,21 @@ input {
   width: auto;
   border-color: #000000;
   margin-top: 10px;
+}
+
+.inputTheme {
+  border-radius: 3.5px;
+  border-color: #000000;
+  background-color: transparent;
+  margin-top: 10px;
+  padding: 10px;
+  width: auto;
+}
+
+.text-advice {
+  text-align: center;
+  justify-content: center;
+  font-size: 15px;
 }
 
 .containerBtn {
@@ -193,4 +213,9 @@ input {
 .linkComText:hover {
   transition: 0.75s;
   color: #557fac;
+}
+
+.imgTheme {
+  width: 100%;
+  object-fit: cover;
 }

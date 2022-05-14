@@ -59,9 +59,9 @@ export default function Home({ tasks }) {
             <div className="taskList" key={task._id}>
                   <div className="taskListTitle">
                     <h3 className="taskTitle">{task.titulo}</h3>
-                    {/* <div className="fitTheme">
-                      <h5 className="taskTheme">🥦 Verduras</h5>
-                    </div> */}
+                    <div className="fitTheme">
+                      <h5 className="taskTheme">{task.tema}</h5>
+                    </div>
                     <p className="taskDesc">{task.descripcion}</p>
                     <p className="taskNoteAdt">{task.notaAdicional}</p>
                     <p className="taskTimePublished">Uploaded {

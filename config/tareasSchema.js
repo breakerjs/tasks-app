@@ -5,11 +5,11 @@ import dayjs from 'dayjs'
 const tareaSchema = new Schema({
     titulo: {
         type: String,
-        required: true
+        required: true,
     },
     descripcion: {
         type: String,
-        required: true
+        required: true,
     },
     notaAdicional: {
         type: String,
@@ -24,6 +24,6 @@ const tareaSchema = new Schema({
         type: String,
         required: false,
     }
-})
+}, { bufferCommands: true })
 
 export default mongoose.models['tareaSchema'] || mongoose.model('tareaSchema', tareaSchema)

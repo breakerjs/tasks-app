@@ -17,7 +17,14 @@ export default function addTask () {
                 <input type="text" placeholder="Título del texto" name="inputTitleTask" />
                 <input type="text" placeholder="Descripcion del texto" name="inputDescTask" />
                 <input type="text" placeholder="Notas adicionales" name="inputNoteTask" />
+                <select name="inputNoteTheme" placeholder='Elige un tema para tu publicacion!' className='inputTheme'>
+                    <option value="👥 Social">👥 Social</option>
+                    <option value="🧠 Aprendizaje">🧠 Aprendizaje</option>
+                    <option value="🎲 Juegos">🎲 Juegos</option>
+                    <option value="🥪 Comidas">🥪 Comidas</option>
+                </select>
                 <input type="submit" value="Añadir Tarea" name="btnAddTask" className='btn' />
+                <h3 className="muted text-advice">Al crear la publicacion, aceptas el hecho de que no podras borrar la <br></br> publicacion ni realizar algun cambio sobre ella.</h3>
             </form>
         </div>
         </>
