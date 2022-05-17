@@ -214,8 +214,3 @@ input {
   transition: 0.75s;
   color: #557fac;
 }
-
-.imgTheme {
-  width: 100%;
-  object-fit: cover;
-}

@@ -6,9 +6,6 @@ export default async function addTask (req,res) {
     if(req.method !== 'POST') {
         res.send("Only POST requests are allowed")
     } else {
-        // Se modifica el Header para mejorar la "respuesta"
-        // res.statusCode = 200;
-        res.setHeader('Content-Type', 'application/json');
         const task = new Task ({
             titulo: req.body.inputTitleTask,
             descripcion: req.body.inputDescTask,
@@ -16,6 +13,6 @@ export default async function addTask (req,res) {
             tema: req.body.inputNoteTheme,
         })
         await task.save()
-        res.send(task)
+        res.redirect('/')
     }
 }
