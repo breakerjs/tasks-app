@@ -1,6 +1,4 @@
-import mongoose from 'mongoose'
 import Task from '../../config/tareasSchema'
-import bodyParser from 'body-parser'
 
 export default async function addTask (req,res) {
     if(req.method !== 'POST') {
