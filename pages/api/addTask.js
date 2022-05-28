@@ -1,4 +1,7 @@
 import Task from '../../config/tareasSchema'
+import bodyParser from 'body-parser'
+
+bodyParser.urlencoded({extended:true})
 
 export default async function addTask (req,res) {
     if(req.method !== 'POST') {
